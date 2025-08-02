@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XO Arena Bot - A New Era of Tic-Tac-Toe</title>
+    <meta name="description" content="Experience Tic-Tac-Toe on Discord like never before. Clean design, powerful features, and seamless gameplay with XO Arena Bot.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://media.discordapp.net/attachments/1342602380117803112/1401112084112212009/XO_Icon.png?ex=688f16d0&is=688dc550&hm=91c184a407b970e13e9576d025e3da7ea377331d486bca078985ac25988893e7&=&format=webp&quality=lossless&width=930&height=930">
+</head>
+<body>
+    <div class="cursor-glow"></div>
+
+    <header class="main-header">
+        <nav>
+            <div class="logo">XO Arena</div>
+            <div class="nav-links">
+                <a href="#features" data-lang="nav_features">Features</a>
+                <a href="#commands" data-lang="nav_commands">Commands</a>
+                <a href="https://discord.gg/your-server-invite" target="_blank" data-lang="nav_support">Support</a>
+            </div>
+            <div class="nav-right">
+                <select id="lang-switcher">
+                    <option value="en">🇬🇧 English</option>
+                    <option value="th">🇹🇭 ไทย</option>
+                    <option value="ja">🇯🇵 日本語</option>
+                </select>
+                <button id="theme-toggle" class="theme-button">
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 010 1.06l-1.591 1.59a.75.75 0 11-1.06-1.061l1.59-1.591a.75.75 0 011.062 0zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.836 17.894a.75.75 0 011.06 0l1.591 1.591a.75.75 0 11-1.06 1.06l-1.591-1.59a.75.75 0 010-1.062zM12 21.75a.75.75 0 01-.75-.75v-2.25a.75.75 0 011.5 0V21a.75.75 0 01-.75.75zM5.106 17.894a.75.75 0 010-1.06l1.591-1.591a.75.75 0 111.06 1.06l-1.59 1.591a.75.75 0 01-1.062 0zM3 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H3.75A.75.75 0 013 12zM6.164 7.164a.75.75 0 01-1.06 0L3.512 5.573a.75.75 0 011.06-1.06l1.591 1.59a.75.75 0 010 1.062z"/></svg>
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 004.463-.976.75.75 0 01.818.162l.522.522a.75.75 0 01-.102 1.071A9.353 9.353 0 0118 18a9.372 9.372 0 01-9.372-9.372 9.353 9.353 0 011.07-4.462l.522-.522a.75.75 0 011.072-.102z" clip-rule="evenodd" /></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="reveal" data-lang="hero_title">The Ultimate Tic-Tac-Toe Experience.</h1>
+                <p class="reveal" data-lang="hero_subtitle">Challenge your friends or our smart AI. Simple, fun, and competitive.</p>
+                <div class="cta-buttons reveal">
+                    <a href="https://discord.com/oauth2/authorize?client_id=YOUR_BOT_ID&permissions=8&scope=bot" class="btn btn-primary" data-lang="hero_cta_add">Add to Discord</a>
+                    <a href="https://top.gg/bot/YOUR_BOT_ID/vote" target="_blank" class="btn btn-secondary" data-lang="hero_cta_vote">Vote for Bot</a>
+                </div>
+                <div class="image-follow-container reveal">
+                    <img id="follow-image" src="https://media.discordapp.net/attachments/1342602380117803112/1401112084112212009/XO_Icon.png?ex=688f16d0&is=688dc550&hm=91c184a407b970e13e9576d025e3da7ea377331d486bca078985ac25988893e7&=&format=webp&quality=lossless&width=930&height=930">
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="content-section">
+            <div class="section-container">
+                <h2 class="reveal" data-lang="features_title">Powerful Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card reveal"><h3 data-lang="feature_1_title">Play with Friends or Bot</h3><p data-lang="feature_1_desc">Challenge a friend for a classic match or test your skills against our smart AI.</p></div>
+                    <div class="feature-card reveal"><h3 data-lang="feature_2_title">Leaderboards & Stats</h3><p data-lang="feature_2_desc">Track your wins, losses, and draws. Climb the leaderboard to become the champion.</p></div>
+                    <div class="feature-card reveal"><h3 data-lang="feature_3_title">Multi-Language Support</h3><p data-lang="feature_3_desc">Play in Thai, English, or Japanese. The bot adapts to your preferred language.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="commands" class="content-section">
+            <div class="section-container">
+                <h2 class="reveal" data-lang="commands_title">All Commands</h2>
+                <div class="commands-grid">
+                    <div class="command-card reveal"><h3>/play <span>@opponent</span></h3><p data-lang="cmd_play">Starts a game with another player.</p></div>
+                    <div class="command-card reveal"><h3>/playbot</h3><p data-lang="cmd_playbot">Starts a game against the AI bot.</p></div>
+                    <div class="command-card reveal"><h3>/stop</h3><p data-lang="cmd_stop">Stops the current game.</p></div>
+                    <div class="command-card reveal"><h3>/leaderboard</h3><p data-lang="cmd_leaderboard">Shows the server's top players.</p></div>
+                    <div class="command-card reveal"><h3>/stats <span>[user]</span></h3><p data-lang="cmd_stats">View your or another player's stats.</p></div>
+                    <div class="command-card reveal"><h3>/setlanguage <span>[th/en/jp]</span></h3><p data-lang="cmd_setlanguage">Changes the bot's language.</p></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="copyright">© 2025 NosuTeam. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="terms.html" target="_blank" data-lang="footer_terms">Terms of Service</a>
+                <span>|</span>
+                <a href="privacy.html" target="_blank" data-lang="footer_privacy">Privacy Policy</a>
+            </div>
+            <p class="made-by">Made with ❤️ by takahashi021</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
