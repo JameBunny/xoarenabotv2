@@ -1,18 +1,31 @@
-/* Dark theme styles for legal pages */
+:root, html[data-theme="light"] {
+    --legal-bg-color: #f5f5f7;
+    --legal-card-color: #ffffff;
+    --legal-text-primary: #1d1d1f;
+    --legal-text-secondary: #515154;
+    --legal-border-color: #d2d2d7;
+    --legal-primary-color: #0071e3;
+}
+html[data-theme="dark"] {
+    --legal-bg-color: #121212;
+    --legal-card-color: #1e1e1e;
+    --legal-text-primary: #EAEAEA;
+    --legal-text-secondary: #a9a9b3;
+    --legal-border-color: #2d2d2d;
+    --legal-primary-color: #4A58F5;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #121212;
-    color: #EAEAEA;
+    background-color: var(--legal-bg-color);
+    color: var(--legal-text-primary);
     line-height: 1.7;
     margin: 0;
     padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.container {
-    max-width: 800px;
-    margin: 40px auto;
-}
-
+.container { max-width: 800px; margin: 20px auto; }
 .legal-header {
     display: flex;
     justify-content: space-between;
@@ -20,69 +33,82 @@ body {
     padding: 20px 0;
     margin-bottom: 20px;
 }
-
+.header-controls { display: flex; align-items: center; gap: 15px; }
 .back-link {
-    color: #a9a9b3;
+    color: var(--legal-text-secondary);
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.2s ease-in-out;
 }
-
-.back-link:hover {
-    color: #ffffff;
-}
-
+.back-link:hover { color: var(--legal-text-primary); }
 #lang-switcher {
-    background-color: #2a2a2e;
-    color: #EAEAEA;
-    border: 1px solid #3a3a4a;
+    background-color: var(--legal-card-color);
+    color: var(--legal-text-secondary);
+    border: 1px solid var(--legal-border-color);
     border-radius: 8px;
     padding: 8px 12px;
     font-size: 0.9rem;
     cursor: pointer;
 }
-
-.policy-box {
-    background-color: #1e1e1e;
-    border-radius: 16px;
-    padding: 40px 50px;
-    border: 1px solid #2d2d2d;
+#lang-switcher option { background: var(--legal-card-color); color: var(--legal-text-primary); }
+.theme-button {
+    background: none; border: none; cursor: pointer; padding: 5px;
+    display: flex; align-items: center; color: var(--legal-text-secondary);
 }
-
-.policy-box h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 10px;
+.theme-button svg { width: 22px; height: 22px; }
+.moon { display: none; }
+html[data-theme="dark"] .sun { display: none; }
+html[data-theme="dark"] .moon { display: block; }
+h1 { font-size: 2.8rem; font-weight: 700; margin-top: 0; margin-bottom: 10px; text-align: center; }
+.shop-description { text-align: center; color: var(--legal-text-secondary); font-size: 1.2rem; margin-bottom: 40px; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+.product-card {
+    background-color: var(--legal-card-color);
+    border: 1px solid var(--legal-border-color);
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.policy-box .effective-date {
-    color: #888;
-    margin-bottom: 40px;
-    font-size: 1rem;
-}
-
-.policy-box h2 {
-    font-size: 1.6rem;
+.product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+html[data-theme="dark"] .product-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+.product-image-container { background-color: #fff; padding: 10px; }
+.product-image-container img { width: 100%; height: auto; display: block; border-radius: 10px; }
+.product-info { padding: 20px; flex-grow: 1; }
+.product-title { font-size: 1.2rem; font-weight: 600; margin: 0 0 10px; }
+.price { font-size: 1.5rem; font-weight: 700; color: var(--legal-primary-color); margin: 0; }
+.buy-button {
+    display: block;
+    background-color: var(--legal-primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
     font-weight: 600;
-    margin-top: 40px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #3a3a4a;
-    padding-bottom: 10px;
+    margin: 20px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
 }
-
-.policy-box p {
-    color: #c9c9d3;
-    margin-bottom: 15px;
-    font-size: 1.1rem;
+.buy-button:hover { background-color: #0056b3; }
+html[data-theme="dark"] .buy-button:hover { background-color: #606cfa; }
+.policy-box {
+    background-color: var(--legal-card-color); border-radius: 16px;
+    padding: 40px 50px; border: 1px solid var(--legal-border-color);
 }
-
-.policy-box ul {
-    color: #c9c9d3;
-    padding-left: 20px;
-    font-size: 1.1rem;
+.policy-box h2 {
+    font-size: 1.6rem; font-weight: 600; margin-top: 40px; margin-bottom: 15px;
+    border-bottom: 1px solid var(--legal-border-color); padding-bottom: 10px;
 }
-
-.policy-box li {
-    margin-bottom: 10px;
+.policy-box p { color: var(--legal-text-secondary); margin-bottom: 15px; font-size: 1.1rem; }
+.policy-box ul { color: var(--legal-text-secondary); padding-left: 20px; font-size: 1.1rem; }
+.policy-box li { margin-bottom: 10px; }
+@media (max-width: 768px) {
+    body { padding: 10px; }
+    .container { margin: 10px auto; }
+    .legal-header { flex-direction: column; gap: 20px; }
+    h1 { font-size: 2.2rem; }
+    .shop-description { font-size: 1rem; }
+    .product-grid { grid-template-columns: 1fr; }
+    .policy-box { padding: 25px 20px; }
 }
