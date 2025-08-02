@@ -5,8 +5,14 @@ widgetBotScript.async = true;
 widgetBotScript.defer = true;
 widgetBotScript.onload = function () {
   new Crate({
-    server: '1334985396127404113', // Your server ID
-    // channel: 'YOUR_CHANNEL_ID' // Optional: A specific channel ID
+    server: '1334985396127404113', // ID เซิร์ฟเวอร์ของคุณ
+    
+    // ใส่ ID ของช่อง หรือ ID ของหมวดหมู่ที่ต้องการซ่อนใน array นี้
+    deny: [
+        '1337872901935726654, 1334985396731514881, 1334985396731514884, 1334985397037563965, 1366476856391630940, 1334985397175980166, 1334985397175980166',          // <-- ID ของหมวดหมู่ที่ต้องการซ่อน
+        'INDIVIDUAL_CHANNEL_ID_TO_HIDE' // <-- ID ของช่องเดี่ยวๆ ก็ยังใส่ได้
+    ]
+
   });
 };
 document.head.appendChild(widgetBotScript);
@@ -52,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let slideInterval;
 
     function showSlide(index) {
+        if (slides.length === 0 || dots.length === 0) return;
         slides.forEach((slide, i) => {
             slide.classList.remove('active');
             dots[i].classList.remove('active');
@@ -62,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function nextSlide() {
+        if (slides.length === 0) return;
         let next = (currentSlide + 1) % slides.length;
         showSlide(next);
     }
@@ -70,6 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
         stopSlideShow();
         slideInterval = setInterval(nextSlide, 5000);
     }
+
+
 
     function stopSlideShow() {
         clearInterval(slideInterval);
