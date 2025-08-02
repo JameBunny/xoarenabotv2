@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,48 +9,66 @@
     <link rel="icon" href="https://media.discordapp.net/attachments/1342602380117803112/1401112084112212009/XO_Icon.png?ex=688f16d0&is=688dc550&hm=91c184a407b970e13e9576d025e3da7ea377331d486bca078985ac25988893e7&=&format=webp&quality=lossless&width=930&height=930">
 </head>
 <body>
-    <div class="cursor-glow"></div>
 
     <header class="main-header">
-        <nav>
-            <div class="logo">XO Arena</div>
+        <nav class="container">
+            <a href="index.html" class="logo-link">
+                <img src="https://media.discordapp.net/attachments/1342602380117803112/1401112084112212009/XO_Icon.png?ex=688f16d0&is=688dc550&hm=91c184a407b970e13e9576d025e3da7ea377331d486bca078985ac25988893e7&=&format=webp&quality=lossless&width=930&height=930" alt="XO Arena Logo" class="logo-image">
+                <span class="logo-text">XO Arena</span>
+            </a>
             <div class="nav-links">
                 <a href="#features" data-lang="nav_features">Features</a>
+                <a href="shop.html" target="_blank" data-lang="nav_shop">Shop</a>
                 <a href="#commands" data-lang="nav_commands">Commands</a>
                 <a href="https://discord.gg/nX2AdShqhn" target="_blank" data-lang="nav_support">Support</a>
             </div>
             <div class="nav-right">
                 <select id="lang-switcher">
-                    <option value="🇺🇸">🇺🇸 English</option>
+                    <option value="en">🇺🇸 English</option>
                     <option value="th">🇹🇭 ไทย</option>
                     <option value="ja">🇯🇵 日本語</option>
                 </select>
-                <button id="theme-toggle" class="theme-button">
+                <button id="theme-toggle" class="theme-button" aria-label="Toggle Theme">
                     <svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 010 1.06l-1.591 1.59a.75.75 0 11-1.06-1.061l1.59-1.591a.75.75 0 011.062 0zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.836 17.894a.75.75 0 011.06 0l1.591 1.591a.75.75 0 11-1.06 1.06l-1.591-1.59a.75.75 0 010-1.062zM12 21.75a.75.75 0 01-.75-.75v-2.25a.75.75 0 011.5 0V21a.75.75 0 01-.75.75zM5.106 17.894a.75.75 0 010-1.06l1.591-1.591a.75.75 0 111.06 1.06l-1.59 1.591a.75.75 0 01-1.062 0zM3 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H3.75A.75.75 0 013 12zM6.164 7.164a.75.75 0 01-1.06 0L3.512 5.573a.75.75 0 011.06-1.06l1.591 1.59a.75.75 0 010 1.062z"/></svg>
                     <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 004.463-.976.75.75 0 01.818.162l.522.522a.75.75 0 01-.102 1.071A9.353 9.353 0 0118 18a9.372 9.372 0 01-9.372-9.372 9.353 9.353 0 011.07-4.462l.522-.522a.75.75 0 011.072-.102z" clip-rule="evenodd" /></svg>
+                </button>
+                <button id="hamburger-button" class="hamburger-menu" aria-label="Open Menu">
+                    <svg class="icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+                    <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
                 </button>
             </div>
         </nav>
     </header>
-
+    
     <main>
         <section class="hero-section">
-            <div class="hero-content">
+            <div class="container hero-content">
                 <h1 class="reveal" data-lang="hero_title">The Ultimate Tic-Tac-Toe Experience.</h1>
                 <p class="reveal" data-lang="hero_subtitle">Challenge your friends or our smart AI. Simple, fun, and competitive.</p>
                 <div class="cta-buttons reveal">
-                    <a href="https://discord.com/oauth2/authorize?client_id=1350821486973288468&permissions=8&integration_type=0&scope=bot+applications.commands" data-lang="hero_cta_add">Add to Discord</a>
-                    <a href="https://top.gg/bot/1350821486973288468" target="_blank" class="btn btn-secondary" data-lang="hero_cta_vote">Vote for Bot</a>
+                    <a href="https://discord.com/oauth2/authorize?client_id=1350821486973288468&permissions=8&integration_type=0&scope=bot+applications.commands" class="btn btn-primary" data-lang="hero_cta_add">Add to Discord</a>
+                    <a href="https://top.gg/bot/1350821486973288468/vote" target="_blank" class="btn btn-secondary" data-lang="hero_cta_vote">Vote for Bot</a>
                 </div>
-                <div class="image-follow-container reveal">
-                    <img id="follow-image" src="https://media.discordapp.net/attachments/1342602380117803112/1401112084112212009/XO_Icon.png?ex=688f16d0&is=688dc550&hm=91c184a407b970e13e9576d025e3da7ea377331d486bca078985ac25988893e7&=&format=webp&quality=lossless&width=930&height=930">
+                <div class="slideshow-container reveal">
+                    <div class="slides">
+                        <img src="https://i.imgur.com/BpPdFST.png" alt="Showcase Image 1" class="slide active">
+                        <img src="https://i.imgur.com/EWB4kdG.png" alt="Showcase Image 2" class="slide">
+                        <img src="https://i.imgur.com/He3X1u1.png" alt="Showcase Image 3" class="slide">
+                        <img src="https://i.imgur.com/B2Hvq8c.png" alt="Showcase Image 4" class="slide">
+                    </div>
+                    <div class="slide-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                        <span class="dot" data-slide="3"></span>
+                    </div>
                 </div>
             </div>
         </section>
-
+        
         <section id="features" class="content-section">
-            <div class="section-container">
-                <h2 class="reveal" data-lang="features_title">Powerful Features</h2>
+            <div class="container">
+                <h2 class="section-title reveal" data-lang="features_title">Powerful Features</h2>
                 <div class="features-grid">
                     <div class="feature-card reveal"><h3 data-lang="feature_1_title">Play with Friends or Bot</h3><p data-lang="feature_1_desc">Challenge a friend for a classic match or test your skills against our smart AI.</p></div>
                     <div class="feature-card reveal"><h3 data-lang="feature_2_title">Leaderboards & Stats</h3><p data-lang="feature_2_desc">Track your wins, losses, and draws. Climb the leaderboard to become the champion.</p></div>
@@ -60,8 +78,8 @@
         </section>
 
         <section id="commands" class="content-section">
-            <div class="section-container">
-                <h2 class="reveal" data-lang="commands_title">All Commands</h2>
+            <div class="container">
+                <h2 class="section-title reveal" data-lang="commands_title">All Commands</h2>
                 <div class="commands-grid">
                     <div class="command-card reveal"><h3>/play <span>@opponent</span></h3><p data-lang="cmd_play">Starts a game with another player.</p></div>
                     <div class="command-card reveal"><h3>/playbot</h3><p data-lang="cmd_playbot">Starts a game against the AI bot.</p></div>
@@ -75,12 +93,22 @@
     </main>
 
     <footer class="footer">
-        <div class="footer-content">
+        <div class="container">
             <p class="copyright">© 2025 NosuTeam. All rights reserved.</p>
             <div class="footer-links">
                 <a href="terms.html" target="_blank" data-lang="footer_terms">Terms of Service</a>
                 <span>|</span>
                 <a href="privacy.html" target="_blank" data-lang="footer_privacy">Privacy Policy</a>
+            </div>
+            <div class="social-links">
+                <p data-lang="follow_us">Follow our developer</p>
+                <div class="social-icons">
+                    <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><img src="https://i.imgur.com/1VqT47f.png" alt="TikTok"></a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="https://i.imgur.com/P74nJvj.png" alt="Facebook"></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><img src="https://i.imgur.com/H54c8Qc.png" alt="YouTube"></a>
+                    <a href="https://x.com" target="_blank" aria-label="X (Twitter)"><img src="https://i.imgur.com/wK4x8rS.png" alt="X"></a>
+                    <a href="https://bsky.app" target="_blank" aria-label="Bluesky"><img src="https://i.imgur.com/bsdZjFm.png" alt="Bluesky"></a>
+                </div>
             </div>
             <p class="made-by">Made with ❤️ by takahashi021</p>
         </div>
