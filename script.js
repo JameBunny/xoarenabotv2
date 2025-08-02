@@ -6,6 +6,9 @@ widgetBotScript.defer = true;
 widgetBotScript.onload = function () {
   new Crate({
     server: '1334985396127404113', // ID เซิร์ฟเวอร์ของคุณ
+
+    // !! เพิ่มบรรทัดนี้เพื่อกำหนดช่องเริ่มต้น !!
+    channel: '1366116183757295816', 
     
     // ใส่ ID ของช่อง หรือ ID ของหมวดหมู่ที่ต้องการซ่อนใน array นี้
     deny: [
