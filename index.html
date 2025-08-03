@@ -6,21 +6,21 @@
     <title>XO Arena Bot - A New Era of Tic-Tac-Toe</title>
     <meta name="description" content="Experience Tic-Tac-Toe on Discord like never before. Clean design, powerful features, and seamless gameplay with XO Arena Bot.">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="https://media.discordapp.net/attachments/1342602380117803112/1401112084112212009/XO_Icon.png?ex=688f16d0&is=688dc550&hm=91c184a407b970e13e9576d025e3da7ea377331d486bca078985ac25988893e7&=&format=webp&quality=lossless&width=930&height=930">
+    <link rel="icon" href="https://i.imgur.com/T5I0a1g.png">
 </head>
 <body>
 
     <header class="main-header">
         <nav class="container">
             <a href="index.html" class="logo-link">
-                <img src="https://media.discordapp.net/attachments/1342602380117803112/1401112084112212009/XO_Icon.png?ex=688f16d0&is=688dc550&hm=91c184a407b970e13e9576d025e3da7ea377331d486bca078985ac25988893e7&=&format=webp&quality=lossless&width=930&height=930" alt="XO Arena Logo" class="logo-image">
+                <img src="https://i.imgur.com/T5I0a1g.png" alt="XO Arena Logo" class="logo-image">
                 <span class="logo-text">XO Arena</span>
             </a>
             <div class="nav-links">
                 <a href="#features" data-lang="nav_features">Features</a>
                 <a href="shop.html" target="_blank" data-lang="nav_shop">Shop</a>
                 <a href="#commands" data-lang="nav_commands">Commands</a>
-                <a href="https://discord.gg/nX2AdShqhn" target="_blank" data-lang="nav_support">Support</a>
+                <a href="https://discord.gg/your-server-invite" target="_blank" data-lang="nav_support">Support</a>
             </div>
             <div class="nav-right">
                 <select id="lang-switcher">
@@ -46,22 +46,11 @@
                 <h1 class="reveal" data-lang="hero_title">The Ultimate Tic-Tac-Toe Experience.</h1>
                 <p class="reveal" data-lang="hero_subtitle">Challenge your friends or our smart AI. Simple, fun, and competitive.</p>
                 <div class="cta-buttons reveal">
-                    <a href="https://discord.com/oauth2/authorize?client_id=1350821486973288468&permissions=8&integration_type=0&scope=bot+applications.commands" class="btn btn-primary" data-lang="hero_cta_add">Add to Discord</a>
-                    <a href="https://top.gg/bot/1350821486973288468/vote" target="_blank" class="btn btn-secondary" data-lang="hero_cta_vote">Vote for Bot</a>
+                    <a href="https://discord.com/oauth2/authorize?client_id=YOUR_BOT_ID&permissions=8&scope=bot" class="btn btn-primary" data-lang="hero_cta_add">Add to Discord</a>
+                    <a href="https://top.gg/bot/YOUR_BOT_ID/vote" target="_blank" class="btn btn-secondary" data-lang="hero_cta_vote">Vote for Bot</a>
                 </div>
-                <div class="slideshow-container reveal">
-                    <div class="slides">
-                        <img src="https://i.imgur.com/BpPdFST.png" alt="Showcase Image 1" class="slide active">
-                        <img src="https://i.imgur.com/EWB4kdG.png" alt="Showcase Image 2" class="slide">
-                        <img src="https://i.imgur.com/He3X1u1.png" alt="Showcase Image 3" class="slide">
-                        <img src="https://i.imgur.com/B2Hvq8c.png" alt="Showcase Image 4" class="slide">
-                    </div>
-                    <div class="slide-dots">
-                        <span class="dot active" data-slide="0"></span>
-                        <span class="dot" data-slide="1"></span>
-                        <span class="dot" data-slide="2"></span>
-                        <span class="dot" data-slide="3"></span>
-                    </div>
+                <div class="hero-image-container reveal">
+                    <img id="hero-image" src="https://i.imgur.com/BpPdFST.png" alt="Interactive Bot Logo">
                 </div>
             </div>
         </section>
@@ -103,11 +92,11 @@
             <div class="social-links">
                 <p data-lang="follow_us">Follow our developer</p>
                 <div class="social-icons">
-                    <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><img src="https://media.discordapp.net/attachments/1342602380117803112/1401237544267419818/Social-media_Tiktok-512.png?ex=688f8ba8&is=688e3a28&hm=7fc523ec0a6ffaace532040bb145fb46ef7823a139371129534aa2a1deee3627&=&format=webp&quality=lossless&width=640&height=640" alt="TikTok"></a>
-                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="https://media.discordapp.net/attachments/1342602380117803112/1401237454035488920/500px-Facebook_Logo_28201929.png?ex=688f8b92&is=688e3a12&hm=a65f11153b23e875ab4587e4ea8ae205157059bb576d9eb676db9545862faec6&=&format=webp&quality=lossless&width=625&height=625" alt="Facebook"></a>
-                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><img src="https://media.discordapp.net/attachments/1342602380117803112/1401305095727091833/Logo-Youtube-PNG-Images-300x225.png?ex=688fca91&is=688e7911&hm=36c5b26054f58f17c0ec8cf196d5e5c979c9e36f7b5bc03e3169089af9e8ad31&=&format=webp&quality=lossless&width=375&height=281" alt="YouTube"></a>
-                    <a href="https://x.com" target="_blank" aria-label="X (Twitter)"><img src="https://media.discordapp.net/attachments/1342602380117803112/1401304205997772892/1200px-Logo_of_Twitter.png?ex=688fc9bd&is=688e783d&hm=092c0a802cdd19468605c66f5504bb2c7ce837da7b17463cb5243ae01aa19982&=&format=webp&quality=lossless&width=531&height=438" alt="X"></a>
-                    <a href="https://bsky.app" target="_blank" aria-label="Bluesky"><img src="https://media.discordapp.net/attachments/1342602380117803112/1401237604258545817/2319px-Bluesky_Logo.png?ex=688f8bb6&is=688e3a36&hm=b5f9014cad112e6a847f9610780347f4d9942a423883b492aa09c92ae90c64bb&=&format=webp&quality=lossless&width=1053&height=930" alt="Bluesky"></a>
+                    <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><img src="https://i.imgur.com/1VqT47f.png" alt="TikTok"></a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="https://i.imgur.com/P74nJvj.png" alt="Facebook"></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><img src="https://i.imgur.com/H54c8Qc.png" alt="YouTube"></a>
+                    <a href="https://x.com" target="_blank" aria-label="X (Twitter)"><img src="https://i.imgur.com/wK4x8rS.png" alt="X"></a>
+                    <a href="https://bsky.app" target="_blank" aria-label="Bluesky"><img src="https://i.imgur.com/bsdZjFm.png" alt="Bluesky"></a>
                 </div>
             </div>
             <p class="made-by">Made with ❤️ by takahashi021</p>
